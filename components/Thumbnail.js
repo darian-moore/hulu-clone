@@ -13,6 +13,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
             sm:hover:scale-105 hover:z-50'
         >
             <Image
+                alt={result.title || result.original_name}
                 layout='responsive'
                 src={
                     `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
